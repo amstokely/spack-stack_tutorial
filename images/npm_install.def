@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: node:18
+
+%files
+    /home/astokely/projects/spack-stack_tutorial/reveal/package.json /usr/src/app/reveal/package.json
+
+%post
+    # Update and install necessary dependencies
+    apt-get update && apt-get install -y \
+        curl \
+        git \
+        && apt-get clean
+
+    cd /usr/src/app/reveal
+
+    # Install the app dependencies
+    npm install

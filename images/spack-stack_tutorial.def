@@ -1,0 +1,17 @@
+Bootstrap: localimage
+From: ./images/npm_install.sif
+
+%environment
+    export PORT=3000
+
+%files
+    /home/astokely/projects/spack-stack_tutorial/presentation /usr/src/app/presentation
+    /home/astokely/projects/spack-stack_tutorial/reveal/* /usr/src/app/reveal/
+
+%post
+    ln -s /usr/src/app/presentation /usr/src/app/reveal/presentation
+
+%runscript
+    # This script runs when you execute the container
+    cd /usr/src/app/reveal
+    nohup npm start
