@@ -2,7 +2,7 @@ Bootstrap: docker
 From: node:18
 
 %files
-    /home/astokely/projects/spack-stack_tutorial/reveal/package.json /usr/src/app/reveal/package.json
+    ./reveal/package.json /usr/src/app/reveal/package.json
 
 %post
     # Update and install necessary dependencies

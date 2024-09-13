@@ -1,13 +1,6 @@
 from pathlib import Path
 import shutil
 import re
-from bs4 import BeautifulSoup
-import re
-import operator
-
-from bs4 import BeautifulSoup
-import re
-import operator
 
 def get_dest_file_path(file_path, index, src_name):
     regex = '(\d)_'
@@ -35,8 +28,13 @@ def replace_filenames_in_html(old_filename, new_filename, html_filepath):
 if __name__ == "__main__":
     presentation_md_files = [
         "title.md",
-        "spack.md",
-        "spack_install_examples.md",
+        "spack_overview.md",
+        "install_numpy_conda.md",
+        "install_numpy_spack.md",
+        "install_numpy_intel_2023.2.1_conda.md",
+        "install_numpy_intel_2023.2.1_spack.md",
+        "install_numpy_intel_2023.2.1_optimized_conda.md",
+        "install_numpy_intel_2023.2.1_optimized_spack.md",
     ]
     move_files(presentation_md_files)
 

@@ -5,8 +5,8 @@ From: ./images/npm_install.sif
     export PORT=3000
 
 %files
-    /home/astokely/projects/spack-stack_tutorial/presentation /usr/src/app/presentation
-    /home/astokely/projects/spack-stack_tutorial/reveal/* /usr/src/app/reveal/
+    ./presentation /usr/src/app/presentation
+    ./reveal/* /usr/src/app/reveal/
 
 %post
     ln -s /usr/src/app/presentation /usr/src/app/reveal/presentation
