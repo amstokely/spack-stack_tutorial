@@ -2,7 +2,7 @@ Bootstrap: docker
 From: node:18
 
 %files
-    ./reveal/package.json /usr/src/app/reveal/package.json
+    ./reveal.js/package.json /usr/src/app/reveal.js/package.json
 
 %post
     # Update and install necessary dependencies
@@ -11,7 +11,7 @@ From: node:18
         git \
         && apt-get clean
 
-    cd /usr/src/app/reveal
+    cd /usr/src/app/reveal.js
 
     # Install the app dependencies
     npm install

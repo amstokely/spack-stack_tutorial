@@ -7,13 +7,13 @@ From: ./images/npm_install.sif
 %files
     ./presentation /usr/src/app/presentation
     ./index.html /usr/src/app/index.html
-    ./reveal/* /usr/src/app/reveal/
+    ./reveal/* /usr/src/app/reveal.js/
 
 %post
-    ln -s /usr/src/app/presentation /usr/src/app/reveal/presentation
-    ln /usr/src/app/index.html /usr/src/app/reveal/index.html
+    ln -s /usr/src/app/presentation /usr/src/app/reveal.js/presentation
+    ln /usr/src/app/index.html /usr/src/app/reveal.js/index.html
 
 %runscript
     # This script runs when you execute the container
-    cd /usr/src/app/reveal
+    cd /usr/src/app/reveal.js
     nohup npm start
