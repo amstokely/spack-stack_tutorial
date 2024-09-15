@@ -7,7 +7,7 @@ From: ./images/npm_install.sif
 %files
     ./presentation /usr/src/app/presentation
     ./index.html /usr/src/app/index.html
-    ./reveal/* /usr/src/app/reveal.js/
+    ./reveal.js/* /usr/src/app/reveal.js/
 
 %post
     ln -s /usr/src/app/presentation /usr/src/app/reveal.js/presentation
