@@ -16,7 +16,7 @@ The tutorial is presented using **reveal.js** and can be viewed in a browser.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/amstokely/spack-stack_tutorial.git
+   git clone https://github.com/amstokely/spack-stack_tutorial.git --recurse-submodules
    ```
 
 2. Navigate to the repository's root directory:
